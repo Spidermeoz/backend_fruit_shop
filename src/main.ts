@@ -59,7 +59,7 @@ const corsOptions: cors.CorsOptions = {
       "http://localhost:3001",
       "http://localhost:3000",
       process.env.FRONTEND_URL,
-      "https://frontend-fruit-shop-w3b3.vercel.app",
+      "https://frontend-fruit-shop-w3b3-i6rmf5pej-jeremiews-projects.vercel.app",
     ];
 
     if (allowed.includes(origin)) {
@@ -84,6 +84,7 @@ const auth = makeAuthMiddleware(authServices.token, userRepo, {
 const can = makeCan(rolesRepo);
 
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.json());
 app.use(helmet());
 app.use(express.json({ limit: "15mb" }));
