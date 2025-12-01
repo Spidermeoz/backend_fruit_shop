@@ -59,7 +59,7 @@ const corsOptions: cors.CorsOptions = {
       "http://localhost:3001",
       "http://localhost:3000",
       process.env.FRONTEND_URL,
-      "https://fruitshop-frontend.vercel.app", // THÊM nếu deploy Vercel
+      "https://frontend-fruit-shop-w3b3.vercel.app/",
     ];
 
     if (allowed.includes(origin)) {
